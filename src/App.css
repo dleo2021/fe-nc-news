@@ -1,5 +1,8 @@
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -9,7 +12,7 @@ header {
   text-align: center;
 }
 
-section {
+.article-card {
   display: grid;
   gap: 1.5rem;
   padding: 16px;
@@ -35,13 +38,13 @@ section {
 }
 
 @media (min-width: 600px) {
-  section {
+  .article-card {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
 
 @media (min-width: 900px) {
-  section {
+  .article-card {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -54,4 +57,38 @@ section {
 .card-image {
   padding: 16px;
   box-sizing: border-box;
+}
+
+.single-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  width: 90%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.single-article-text {
+  text-align: center;
+}
+
+.single-article-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.circular {
+  width: 100px;
+  height: 70px;
+  background-color: lightcoral;
+  border-radius: 50%;
+  align-items: center;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  border: 3px solid black;
 }

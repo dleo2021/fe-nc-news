@@ -12,7 +12,7 @@ const Articles = () => {
   }, []);
 
   return (
-    <section>
+    <section className="article-card">
       {articles.map((article) => {
         return <ArticleCard key={article.article_id} article={article} />;
       })}

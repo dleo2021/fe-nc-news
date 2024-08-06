@@ -1,9 +1,12 @@
 import { Card, CardHeader, CardMedia } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ArticleCard = ({ article }) => {
   return (
     <Card>
-      <CardHeader title={article.title} />
+      <Link to={`/articles/${article.article_id}`}>
+        <CardHeader title={article.title} />
+      </Link>
       <CardMedia
         component="img"
         image={article.article_img_url}
