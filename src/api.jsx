@@ -6,7 +6,7 @@ const api = axios.create({
 
 export const getArticles = () => {
   return api.get("/articles").then(({ data }) => {
-    console.log(articles);
+    console.log(data.articles);
     return data.articles;
   });
 };
