@@ -14,6 +14,8 @@ const ArticleCard = ({ article }) => {
         className="card-image"
       />
       <h2>Author: {article.author}</h2>
+      <p>Votes: {article.votes}</p>
+      <p>Comments: {article.comment_count}</p>
     </Card>
   );
 };
