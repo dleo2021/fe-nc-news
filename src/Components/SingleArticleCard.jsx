@@ -1,3 +1,5 @@
+import ArticleVotes from "./ArticleVotes";
+
 const SingleArticleCard = ({ article }) => {
   const date = new Date(article.created_at);
   const dateString = date.toString();
@@ -13,7 +15,7 @@ const SingleArticleCard = ({ article }) => {
       <p className="circular">{article.topic}</p>
       <h3>Author: {article.author}</h3>
       <p>Date: {dateString}</p>
-
+      <ArticleVotes article={article} />
       <p>{article.body}</p>
     </div>
   );

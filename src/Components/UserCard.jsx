@@ -1,20 +1,26 @@
 import { UserContext } from "../Contexts/UserContext";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 const UserCard = ({ user, onLogin }) => {
   const { setUser } = useContext(UserContext);
+  const navigate = useNavigate();
 
   const handleLogin = () => {
     setUser(user);
     onLogin(user);
+    navigate("/articles");
   };
 
   return (
-    <div>
+    <section className="user-card">
       <h3>{user.username}</h3>
       <img src={user.avatar_url} alt={"Avatar of user"} />
-      <button onClick={handleLogin}>Login</button>
-    </div>
+      <Button variant="contained" onClick={handleLogin}>
+        Login
+      </Button>
+    </section>
   );
 };
 
