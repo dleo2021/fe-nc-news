@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getArticleById } from "../api";
 import SingleArticleCard from "./SingleArticleCard";
 import Loader from "./Loader";
+import Comments from "./Comments";
 
 const SingleArticle = () => {
   const [article, setArticle] = useState({});
@@ -23,6 +24,7 @@ const SingleArticle = () => {
   return (
     <section className="single-article">
       <SingleArticleCard key={article.article_id} article={article} />
+      <Comments />
     </section>
   );
 };

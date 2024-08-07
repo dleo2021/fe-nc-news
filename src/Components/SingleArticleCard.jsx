@@ -1,6 +1,5 @@
 const SingleArticleCard = ({ article }) => {
   const date = new Date(article.created_at);
-  console.log(typeof date);
   const dateString = date.toString();
 
   return (
