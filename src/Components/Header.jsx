@@ -5,7 +5,12 @@ const Header = () => {
     <header>
       <h1>NC News</h1>
       <nav>
-        <Link to="/articles">Home</Link>
+        <Link to="/articles" className="nav">
+          Home
+        </Link>
+        <Link to="/users" className="nav">
+          Login
+        </Link>
       </nav>
     </header>
   );
