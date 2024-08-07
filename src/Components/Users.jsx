@@ -22,14 +22,18 @@ const Users = () => {
   if (isLoading) return <Loader />;
 
   return (
-    <div>
-      <h2>Welcome{loggedInUser ? ` ${loggedInUser.username}` : ""}</h2>
-      {users.map((user) => {
-        return (
-          <UserCard key={user.username} user={user} onLogin={handleLogin} />
-        );
-      })}
-    </div>
+    <section>
+      <h2 className="user-subheading">
+        Welcome{loggedInUser ? ` ${loggedInUser.username}` : ""}
+      </h2>
+      <div className="user-card-container">
+        {users.map((user) => {
+          return (
+            <UserCard key={user.username} user={user} onLogin={handleLogin} />
+          );
+        })}
+      </div>
+    </section>
   );
 };
 

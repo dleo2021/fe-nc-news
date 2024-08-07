@@ -12,6 +12,12 @@ header {
   text-align: center;
 }
 
+.avatar-header {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
 .article-card {
   display: grid;
   gap: 1.5rem;
@@ -129,4 +135,61 @@ header {
   .comment-card .MuiCard-root {
     padding: 8px;
   }
+}
+
+.vote-icons {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  color: rgb(159, 13, 13);
+}
+
+.vote-icons .icon {
+  cursor: pointer;
+  font-size: 3rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.4);
+}
+
+.user-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.user-card {
+  border: 1px solid #838080;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(83, 82, 82, 0.15);
+}
+
+.user-card img {
+  border-radius: 50%;
+  width: 50%;
+  height: 40%;
+  margin-bottom: 0;
+  align-items: center;
+}
+
+.user-card h3 {
+  margin: 0;
+  color: red;
+}
+
+.user-subheading {
+  margin-left: 30px;
 }

@@ -27,3 +27,9 @@ export const getArticleComments = (id) => {
     return data.comments;
   });
 };
+
+export const patchArticleVotes = (id, newVote) => {
+  return api.patch(`/articles/${id}`, newVote).then(({ data }) => {
+    return data.article;
+  });
+};
