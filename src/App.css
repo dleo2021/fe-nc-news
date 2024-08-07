@@ -105,6 +105,8 @@ header {
 
 .comment-card {
   margin: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .comment-card .MuiCard-root {
@@ -112,6 +114,7 @@ header {
   text-align: left;
   padding: 20px;
   background-color: #ffe6e6;
+  width: 100%;
 }
 
 .comment-card p {
@@ -120,4 +123,10 @@ header {
 
 .comment-card h4 {
   margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+  .comment-card .MuiCard-root {
+    padding: 8px;
+  }
 }

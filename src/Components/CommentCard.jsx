@@ -1,7 +1,6 @@
 import { Card } from "@mui/material";
 
 const CommentCard = ({ comment }) => {
-  console.log(comment);
   const date = new Date(comment.created_at);
   const dateString = date.toString();
 
