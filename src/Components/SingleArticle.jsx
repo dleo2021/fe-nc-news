@@ -10,6 +10,7 @@ const SingleArticle = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const { article_id } = useParams();
+  console.log(article_id);
 
   useEffect(() => {
     setIsLoading(true);

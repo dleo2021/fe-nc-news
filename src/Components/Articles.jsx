@@ -50,7 +50,7 @@ const Articles = () => {
         </Link>
         {topics.map(({ slug }) => {
           return (
-            <Link key={slug} to={`/articles/${slug}`}>
+            <Link key={slug} to={`/topics/${slug}`}>
               <Button
                 variant="contained"
                 className="topic-nav-link"
