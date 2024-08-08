@@ -17,7 +17,19 @@ const UserCard = ({ user, onLogin }) => {
     <section className="user-card">
       <h3>{user.username}</h3>
       <img src={user.avatar_url} alt={"Avatar of user"} />
-      <Button variant="contained" onClick={handleLogin}>
+      <Button
+        variant="contained"
+        onClick={handleLogin}
+        sx={{
+          backgroundColor: "#800000",
+          color: "#fff",
+          marginLeft: "20px",
+          marginTop: "7px",
+          "&:hover": {
+            backgroundColor: "#660000",
+          },
+        }}
+      >
         Login
       </Button>
     </section>
