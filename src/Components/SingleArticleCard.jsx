@@ -5,7 +5,7 @@ const SingleArticleCard = ({ article }) => {
   const dateString = date.toString();
 
   return (
-    <div className="single-article">
+    <div className="single-article-card">
       <h2>{article.title}</h2>
       <img
         className="single-article-img"
