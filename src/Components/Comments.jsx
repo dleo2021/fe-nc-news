@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getArticleComments } from "../api";
 import Loader from "./Loader";
 import CommentCard from "./CommentCard";
+import CommentForm from "./CommentForm";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
@@ -21,6 +22,7 @@ const Comments = () => {
   return (
     <section className="comments-subheading">
       <h2>Comments:</h2>
+      <CommentForm setComments={setComments} article_id={article_id} />
       {comments.map((comment) => {
         return <CommentCard key={comment.comment_id} comment={comment} />;
       })}

@@ -24,7 +24,7 @@ const SingleArticle = () => {
   return (
     <section className="single-article">
       <SingleArticleCard key={article.article_id} article={article} />
-      <Comments />
+      <Comments article_id={article_id} />
     </section>
   );
 };

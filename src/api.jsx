@@ -33,3 +33,14 @@ export const patchArticleVotes = (id, newVote) => {
     return data.article;
   });
 };
+
+export const postComment = (id, user, comment) => {
+  const data = {
+    username: user,
+    body: comment,
+  };
+
+  return api.post(`/articles/${id}/comments`, data).then(({ data }) => {
+    return data;
+  });
+};
