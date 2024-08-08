@@ -29,6 +29,7 @@ const CommentForm = ({ article_id, setComments }) => {
           return copyComments;
         });
         setSuccess(true);
+        setNewComment("");
         setError("");
       })
       .catch((err) => {
@@ -47,6 +48,7 @@ const CommentForm = ({ article_id, setComments }) => {
         variant="outlined"
         style={{ width: "70%" }}
         multiline
+        value={newComment}
         onChange={handleChange}
       />
       <Button
