@@ -250,7 +250,9 @@ header {
 }
 
 .comment-card {
-  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
   width: 100%;
   box-sizing: border-box;
   right: 10px;
