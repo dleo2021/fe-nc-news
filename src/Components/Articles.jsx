@@ -8,6 +8,10 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import Fab from "@mui/material/Fab";
+import AddIcon from "@mui/icons-material/Add";
+import { Link } from "react-router-dom";
+import { Tooltip } from "@mui/material";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -67,6 +71,13 @@ const Articles = () => {
             <MenuItem value="desc">Desc</MenuItem>
           </Select>
         </FormControl>
+        <Link to="/new-article">
+          <Tooltip title="Add new article" arrow>
+            <Fab color="primary" aria-label="add new article">
+              <AddIcon />
+            </Fab>
+          </Tooltip>
+        </Link>
       </nav>
 
       <section className="article-card">

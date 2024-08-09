@@ -56,3 +56,9 @@ export const getTopics = () => {
 export const deleteComment = (comment_id) => {
   return api.delete(`/comments/${comment_id}`);
 };
+
+export const postArticle = (article) => {
+  return axios.post("/articles").then(({ data }) => {
+    return data.article;
+  });
+};
