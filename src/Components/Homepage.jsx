@@ -1,6 +1,6 @@
 const Homepage = () => {
   return (
-    <section>
+    <section className="homepage">
       <h2>Welcome to NC news</h2>
       <p>
         NC news is your one-stop source for all the latest news and lifestyle

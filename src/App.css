@@ -1,9 +1,5 @@
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
   padding: 0;
   background-color: #f4f4f4;
   font-family: "Arial", sans-serif;
@@ -15,26 +11,54 @@ header {
   padding: 1rem;
   text-align: center;
   width: 100%;
-  top: 0;
-  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  font-size: 2rem;
+  margin-bottom: 1px;
+  box-sizing: border-box;
+}
+
+.heading {
+  margin: 0;
+  text-align: center;
+  align-items: center;
+}
+
+.welcome-p {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.header-nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  color: #00005c;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.nav-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.icon-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 3rem;
-  margin-bottom: 1px;
-}
-
-.header-nav-bar {
-  display: flex;
-  justify-content: flex-end;
-  gap: 55px;
-  font-size: 1.2rem;
-  margin-top: 5px;
-  margin-bottom: 5px;
+.icon-container span {
+  font-size: 16px;
   color: #00005c;
 }
 
@@ -65,11 +89,51 @@ header h1 {
 }
 
 .avatar-header {
-  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   width: 70px;
   height: 70px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-nav-bar {
+    font-size: 1rem;
+    gap: 10px;
+  }
+
+  header {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .welcome-p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  .avatar-header {
+    top: 10px;
+    right: 3px;
+    width: 32px;
+    height: 32px;
+  }
+  .nav-items {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .icon-container span {
+    font-size: 14px;
+  }
 }
 
 .article-card {
@@ -107,6 +171,13 @@ header h1 {
   .article-card {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 
 .MuiCard-root:hover {
@@ -160,7 +231,7 @@ header h1 {
 }
 
 .nav {
-  margin-right: 20px;
+  margin-right: auto;
 }
 
 .comments-subheading {
@@ -173,6 +244,7 @@ header h1 {
   margin: 20px 0;
   width: 100%;
   box-sizing: border-box;
+  right: 10px;
 }
 
 .comment-card .MuiCard-root {
@@ -255,11 +327,20 @@ header h1 {
   margin-left: 30px;
 }
 
+.topic-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .sort-nav-bar {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
   margin-top: 15px;
   margin-bottom: 15px;
-  margin-right: 40px;
+  margin-right: 20px;
+  margin-left: 5px;
 }

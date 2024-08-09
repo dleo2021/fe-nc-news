@@ -13,7 +13,7 @@ const Topic = () => {
   }, []);
 
   return (
-    <section>
+    <section className="topic-section">
       <Link to="/articles">
         <Button
           variant="contained"

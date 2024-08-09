@@ -17,6 +17,14 @@ const Comments = () => {
     });
   }, [article_id]);
 
+  const handleDeleteComment = (comment_id) => {
+    setComments((currComments) => {
+      return currComments.filter(
+        (comment) => comment.comment_id !== comment_id
+      );
+    });
+  };
+
   if (isLoading) return <Loader />;
 
   return (
@@ -24,7 +32,13 @@ const Comments = () => {
       <h2>Comments:</h2>
       <CommentForm setComments={setComments} article_id={article_id} />
       {comments.map((comment) => {
-        return <CommentCard key={comment.comment_id} comment={comment} />;
+        return (
+          <CommentCard
+            key={comment.comment_id}
+            comment={comment}
+            onDelete={handleDeleteComment}
+          />
+        );
       })}
     </section>
   );
