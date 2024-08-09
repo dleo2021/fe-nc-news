@@ -20,7 +20,7 @@ const CommentCard = ({ comment, onDelete }) => {
 
         setTimeout(() => {
           onDelete(comment.comment_id);
-        }, 3000);
+        }, 2000);
       })
       .catch((err) => {
         setError("Failed to delete the comment. Please try again later.");
